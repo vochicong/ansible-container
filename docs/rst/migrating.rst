@@ -19,6 +19,9 @@ directives will be turned into ``copy``, ``synchronize``, or ``get_url`` tasks.
 And other directives will be converted into role default variables or container
 metadata.
 
+Note that due to docker limitation, ``copy`` and ``synchronize`` don't work with
+files or directories outside the project context.
+
 When you run your build process, pay attention to the output that Ansible provides
 offering suggestions for how you can better leverage built-in Ansible modules to
 refine your tasks. For example, if your Dockerfile contained a directive to
